@@ -9,7 +9,8 @@
         <!--[if lt IE 9]>
           <script src="js/html5shiv.js"></script>
         <![endif]-->
- </head>
+
+</head>
  <body>
  
     <div class="container">

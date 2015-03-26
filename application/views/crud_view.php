@@ -1,26 +1,47 @@
+ <?php 
+foreach($css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+ 
+<?php endforeach; ?>
+<?php foreach($js_files as $file): ?>
+ 
+    <script src="<?php echo $file; ?>"></script>
+<?php endforeach; ?>
+ 
+<style type='text/css'>
+body
+{
+    font-family: Arial;
+    font-size: 14px;
+}
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: 14px;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+</style>
+
 <br>
 <br>
-<div class="container">
 
 
-<?php $this->load->helper('form'); ?>
+ <div>
+        <a href='<?php echo site_url('examples/offices_management')?>'>Offices</a> | 
+        <a href='<?php echo site_url('examples/employees_management')?>'>Employees</a> |
+        <a href='<?php echo site_url('examples/customers_management')?>'>Customers</a> |
+        <a href='<?php echo site_url('examples/orders_management')?>'>Orders</a> |
+        <a href='<?php echo site_url('examples/products_management')?>'>Products</a> | 
+        <a href='<?php echo site_url('examples/film_management')?>'>Films</a>
  
-<?php echo form_open('crud'); ?>
+    </div>
+<!-- End of header-->
+    <div style='height:20px;'></div>  
+    <div>
+        <?php echo $output; ?>
  
-    <p>
-    	State:
-        <?php echo form_input('state'); ?>
-    </p>
- 
-    <p>City:
-        <?php echo form_input('city'); ?>
-    </p>
- 
-    <p>
-        <?php echo form_submit('submit', 'Submit'); ?>
-    </p>
- 
-<?php echo form_close(); ?>
-
-</div>
+    </div>
 

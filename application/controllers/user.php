@@ -23,7 +23,9 @@ class User extends CI_Controller{
   $data['title']= 'Welcome';
   $this->load->view('header_view',$data);
   $this->load->view('welcome_view.php', $data);
+  //this->load->view('crud_view.php', $data);
   $this->load->view('footer_view',$data);
+  
  }
  public function login()
  {
